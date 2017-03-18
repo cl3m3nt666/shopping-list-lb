@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "mongo",
+    "port": 27017,
+    "url": "mongodb://mongo:27017/shopping",
+    "database": "shopping",
+    "password": "",
+    "name": "mongo",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

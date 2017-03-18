@@ -1,0 +1,26 @@
+<section>
+  <form ng-submit="login()">
+    <fieldset>
+      <legend>Login form</legend>
+
+      <div class="form-group form-group-lg">
+        <label>Email</label>
+        <input class="form-control " type="text" ng-model="user.email">
+        <p class="hint" ng-show="form.email.$error.required && submitted">Email is
+            required</p>
+      </div>
+
+      <div class="form-group form-group-lg">
+        <label>Password</label>
+        <input class="form-control" type="password" ng-model="user.password">
+        <p class="hint" ng-show="form.password.$error.required && submitted">
+            Password is required</p>
+      </div>
+
+
+      <div class="actions">
+        <button class="btn btn-primary">Login</button>
+      </div>
+    </fieldset>
+  </form>
+</section>

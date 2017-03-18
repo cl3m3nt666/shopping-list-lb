@@ -1,0 +1,38 @@
+
+<form ng-submit="addArticle()">
+  <div class="container">
+    <div class="form-group form-group-lg">
+      <div class="col-xs-2">
+        <label>Amount</label>
+        <input class="form-control" type="number" ng-model="article.amount">
+        <p ng-show="form.amount.$error.required && submitted">amount is
+          required</p>
+      </div>
+      <div class="col-xs-3">
+        <label>Name</label>
+        <input class="form-control" type="text" ng-model="article.name">
+        <p ng-show="form.name.$error.required && submitted">name is
+          required</p>
+      </div>
+      <div class="col-xs-4">
+        <label>Description</label>
+        <input class="form-control" type="text" ng-model="article.description">
+      </div>
+    </div>
+      <div class="actions">
+        <button class="btn btn-primary">add</button>
+      </div>
+  </div>
+</form>
+<div class="container">
+  <div ng-controller="ArticleController" ng-repeat="a in articles" class="well">
+
+        <span class="pull-left badge">{{a.amount}}</span>
+        &nbsp;&nbsp;{{a.name}}
+        <button class="pull-right btn-sm btn-warning" type="button" ng-click="removeArticle(a.id)">
+          <span class="ng-binding ng-scope icon-fixed-width icon-trash"></span>
+        </button>
+        <p class="list-group-item-text">{{a.description}}</p>
+
+  </div>
+</div>
